@@ -37,12 +37,12 @@ function displayInfo (data) {
     let blogUrl = `<a href="${data.blog}" target="_blank">${data.blog}</a>`;
 
     photo.src = data.avatar_url;
-    document.getElementById("nameData").innerText = data.name;
+    document.getElementById("nameData").innerText = data.name? data.name : "No name";
     document.getElementById("loginData").innerText = data.login;
     document.getElementById("gitUrlData").innerHTML = accountUrl;
     document.getElementById("blogUrlData").innerHTML = blogUrl;
-    document.getElementById("cityData").innerText = data.location;
-    document.getElementById("emailData").innerText = data.email;
+    document.getElementById("cityData").innerText = data.location ? data.location : "No city";
+    document.getElementById("emailData").innerText = data.email ? data.email : "No email";
     document.getElementById("followersData").innerText = data.followers;
     document.getElementById("followingData").innerText = data.following;
 }
